@@ -99,7 +99,14 @@ function PersonalInfo() {
 
   return (
     <div className="bg-white p-6 rounded-xl shadow-sm border border-neutral-100 mb-6">
-      <div className=" flex items-center   mb-5 ">
+      <div className=" flex justify-center gap-2 items-center   mb-5 ">
+        <User className="h-5 w-5" />
+
+        <h1 className="font-semibold text-neutral-800 ">
+          1. Şəxsi məlumatlar - Əlaqə Məlumatları
+        </h1>
+      </div>
+      <div className=" flex items-center gap-2  mb-5 ">
         <User className="h-5 w-5" />
         <h2 className="  font-semibold text-neutral-800  ">
           1.1 Şəxsi məlumatlar

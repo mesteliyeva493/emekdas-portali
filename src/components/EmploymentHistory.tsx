@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useFormContext, useFieldArray } from "react-hook-form";
-import { Trash2, Plus } from "lucide-react";
+import {
+  Trash2,
+  Plus,
+  GraduationCap,
+  GraduationCapIcon,
+  Wallet,
+} from "lucide-react";
 import {
   FormField,
   FormItem,
@@ -81,9 +87,18 @@ function EmploymentHistory() {
 
   return (
     <div className="bg-white p-6 rounded-xl shadow-sm border border-neutral-100 mb-6">
-      <h2 className="font-semibold text-neutral-800 mb-5">
-        2.1 Əmək fəaliyyəti
-      </h2>
+      <div className=" flex justify-center gap-2 items-center   mb-5 ">
+        <GraduationCapIcon className="h-5 w-5" />
+
+        <h1 className="font-semibold text-neutral-800 ">
+          2. Əmək fəaliyyəti-Təhsil-Elmi dərəcə -Sertifikatlar
+        </h1>
+      </div>
+      <div className=" flex items-center gap-2  mb-5 ">
+        <Wallet className="h-5 w-5" />
+
+        <h2 className="font-semibold text-neutral-800 ">2.1 Əmək fəaliyyəti</h2>
+      </div>
 
       {fields.map((field, index) => {
         const isCurrentlyWorking = watch(
@@ -108,7 +123,10 @@ function EmploymentHistory() {
                     <FormLabel className="text-xs text-neutral-400">
                       Təşkilatın adı*
                     </FormLabel>
-                    <Select onValueChange={field.onChange} value={field.value || ""}>
+                    <Select
+                      onValueChange={field.onChange}
+                      value={field.value || ""}
+                    >
                       <FormControl>
                         <SelectTrigger>
                           <SelectValue placeholder="Seçin" />
@@ -135,7 +153,10 @@ function EmploymentHistory() {
                     <FormLabel className="text-xs text-neutral-400">
                       Struktur bölmə*
                     </FormLabel>
-                    <Select onValueChange={field.onChange} value={field.value || ""}>
+                    <Select
+                      onValueChange={field.onChange}
+                      value={field.value || ""}
+                    >
                       <FormControl>
                         <SelectTrigger>
                           <SelectValue placeholder="Seçin" />
@@ -162,7 +183,10 @@ function EmploymentHistory() {
                     <FormLabel className="text-xs text-neutral-400">
                       Vəzifə*
                     </FormLabel>
-                    <Select onValueChange={field.onChange} value={field.value || ""}>
+                    <Select
+                      onValueChange={field.onChange}
+                      value={field.value || ""}
+                    >
                       <FormControl>
                         <SelectTrigger>
                           <SelectValue placeholder="Seçin" />
@@ -189,7 +213,10 @@ function EmploymentHistory() {
                     <FormLabel className="text-xs text-neutral-400">
                       Əsas/əlavə iş yeri
                     </FormLabel>
-                    <Select onValueChange={field.onChange} value={field.value || ""}>
+                    <Select
+                      onValueChange={field.onChange}
+                      value={field.value || ""}
+                    >
                       <FormControl>
                         <SelectTrigger>
                           <SelectValue placeholder="Seçin" />
@@ -237,7 +264,10 @@ function EmploymentHistory() {
                     <FormLabel className="text-xs text-neutral-400">
                       Dövlət qulluqçu*
                     </FormLabel>
-                    <Select onValueChange={field.onChange} value={field.value || ""}>
+                    <Select
+                      onValueChange={field.onChange}
+                      value={field.value || ""}
+                    >
                       <FormControl>
                         <SelectTrigger>
                           <SelectValue placeholder="Seçin" />
